@@ -26,7 +26,7 @@ def read_json(path: Path) -> Any:
 
 def write_json(path: Path, value: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    path.write_bytes((json.dumps(value, indent=2, ensure_ascii=False) + "\n").encode("utf-8"))
 
 
 def read_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -38,7 +38,7 @@ def read_jsonl(path: Path) -> list[dict[str, Any]]:
 def write_jsonl(path: Path, values: Iterable[dict[str, Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     lines = [canonical_json(value) for value in values]
-    path.write_text("\n".join(lines) + ("\n" if lines else ""), encoding="utf-8")
+    path.write_bytes(("\n".join(lines) + ("\n" if lines else "")).encode("utf-8"))
 
 
 def validate_records(schema_path: Path, values: Iterable[dict[str, Any]]) -> list[str]:
