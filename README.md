@@ -13,9 +13,10 @@ must retain its artifact identity, source, method, confidence, freshness, and re
 
 ## Status
 
-The repository is in its contract-first bootstrap stage. It currently contains the schema,
-validation tooling, contribution rules, methodology, governance, and staged build plan. It does not
-yet publish production catalog records or claim comprehensive coverage.
+The repository has published its first bounded source snapshot. It contains 107 pinned ModelFit
+staging candidates, two exact artifacts resolved through a maintainer-controlled local Ollama API,
+and four production records: two runtime-verified artifact records and two conservative fit
+estimates. It does not claim comprehensive coverage.
 
 ## Design principles
 
@@ -50,12 +51,23 @@ tests/            Validator and contract tests
 
 ```bash
 python -m pip install -e .[dev]
-python scripts/validate_catalog.py
+python -m scripts.validate_catalog
+python -m scripts.validate_staging
 python -m pytest
 ```
 
-An empty catalog is valid during bootstrap. Production releases will not be created until at least
-one rights-cleared source record and its provenance pass review.
+To reproduce the current collection and release from the reviewed inputs:
+
+```bash
+python -m scripts.collect_modelfit
+python -m scripts.resolve_ollama_local
+python -m scripts.promote_candidates
+python -m scripts.build_snapshot --version 0.1.0 --released-at 2026-07-18T21:00:00Z
+```
+
+The resolver queries only a local Ollama API and requires an exact tag match. It does not scrape or
+automate Ollama-hosted services. Promotion is limited to candidate IDs explicitly listed in
+`reviews/approvals.json`.
 
 ## Relationship to Lattice
 

@@ -18,7 +18,7 @@ or machine-identifying data.
 ```bash
 python -m pip install -e .[dev]
 ruff check .
-python scripts/validate_catalog.py
+python -m scripts.validate_catalog
 python -m pytest
 ```
 

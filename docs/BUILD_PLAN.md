@@ -1,5 +1,15 @@
 # Local Model Ledger build plan
 
+## Current status — 2026-07-18
+
+- LML0 contract, governance, validation, tests, and CI are complete for schema v1.
+- The first LML1 source is pinned and reviewed: ModelFit at commit
+  `41484659c9b9e7b8e3c2e008a7110c7e16b9fbab`, CC BY 4.0.
+- The pipeline produced 107 staging candidates and resolved two exact installed Ollama artifacts
+  without accessing Ollama-hosted services.
+- Catalog release `v0.1.0` contains two runtime-verified artifact records and two conservative
+  ModelFit fit estimates. This is a bounded seed, not completion of broad LML1 coverage.
+
 ## Objective
 
 Build a public, provider-neutral, automatically maintainable evidence catalog that applications can

@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": {
+    "source": "ollama",
+    "identifier": "qwen2.5-coder:7b",
+    "revision": "sha256:dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+    "format": "gguf",
+    "precision": "Q4_K_M",
+    "size_bytes": 4683087561,
+    "parameter_count": 7600000000,
+    "native_context_tokens": 32768,
+    "model_license": "Apache-2.0"
+  },
+  "review": {
+    "status": "approved_for_snapshot",
+    "reviewed_at": "2026-07-18T21:00:00Z",
+    "expires_at": "2027-01-18T21:00:00Z",
+    "reviewer": "Dylan Dunn"
+  },
+  "record_id": "artifact:qwen2-5-coder-7b:dae161e27b0e90dd",
+  "record_kind": "artifact_metadata",
+  "evidence": {
+    "grade": "runtime_verified",
+    "method": "Exact installed artifact returned by the maintainer-controlled local Ollama API.",
+    "metrics": {
+      "locally_installed": true,
+      "capabilities": "completion,insert,tools",
+      "license_text_sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+    },
+    "notes": [
+      "No model weights or license text are redistributed by this record."
+    ]
+  },
+  "provenance": {
+    "source_url": "https://github.com/ollama/ollama/blob/main/docs/api.md",
+    "source_revision": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+    "retrieved_at": "2026-07-18T20:49:42Z",
+    "contributor": "Dylan Dunn",
+    "data_license": "CC0-1.0",
+    "redistribution_verified": true,
+    "required_attribution": null
+  }
+}

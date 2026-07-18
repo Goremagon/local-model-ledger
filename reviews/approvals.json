@@ -1,0 +1,16 @@
+{
+  "approvals": [
+    {
+      "candidate_id": "modelfit:qwen2-5-coder-7b:b795b19d44a1",
+      "reviewed_at": "2026-07-18T21:00:00Z",
+      "expires_at": "2027-01-18T21:00:00Z",
+      "reviewer": "Dylan Dunn"
+    },
+    {
+      "candidate_id": "modelfit:qwen3-30b:bb265d38691a",
+      "reviewed_at": "2026-07-18T21:00:00Z",
+      "expires_at": "2027-01-18T21:00:00Z",
+      "reviewer": "Dylan Dunn"
+    }
+  ]
+}

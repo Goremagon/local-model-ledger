@@ -1,0 +1,22 @@
+{
+  "source_id": "ollama-local-api",
+  "status": "approved_for_local_resolution_only",
+  "documentation_url": "https://github.com/ollama/ollama/blob/main/docs/api.md",
+  "software_license": "MIT",
+  "hosted_service_terms": "https://ollama.com/terms",
+  "reviewed_at": "2026-07-18T00:00:00Z",
+  "reviewer": "Dylan Dunn",
+  "allowed": [
+    "Read-only queries to a maintainer-controlled local Ollama API for installed artifact metadata",
+    "Explicit maintainer-supplied lock files produced from that local API"
+  ],
+  "prohibited": [
+    "Automated access to Ollama-hosted services or registry endpoints without written permission",
+    "Treating an Ollama tag as immutable without recording its resolved digest",
+    "Redistributing model weights or license text"
+  ],
+  "review_notes": [
+    "Ollama hosted-service terms prohibit automated access without permission.",
+    "The resolver therefore defaults to 127.0.0.1 and rejects non-loopback endpoints unless explicitly overridden for a maintainer-controlled service."
+  ]
+}

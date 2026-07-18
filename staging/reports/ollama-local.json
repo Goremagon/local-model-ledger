@@ -1,0 +1,430 @@
+{
+  "resolver": "ollama-local-api-exact-match-v1",
+  "runtime_version": "0.32.1",
+  "resolved_at": "2026-07-18T20:49:42Z",
+  "candidate_count": 107,
+  "resolved_count": 2,
+  "unresolved_count": 105,
+  "unresolved": [
+    {
+      "candidate_id": "modelfit:claude-3-5-sonnet:279d6702845f",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:claude-3-7-sonnet:d565f914d525",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:claude-3-opus:9c87add1108f",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:claude-4-opus:b180143b6a7f",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:claude-4-sonnet:9bce61826ab8",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:claude-fable-5:7238e88d4a88",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:claude-opus-4-7:c1baa52ddd22",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:claude-opus-4-8:45d55b6cce7b",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:cohere-north-mini-code:e68b4550c86e",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:deepseek-r1-671b:22a5972c1244",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:deepseek-r1-distill-llama-70b:b401bcb01ccd",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:deepseek-r1-distill-qwen-14b:8a4cddf0be4a",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:deepseek-r1-distill-qwen-7b:32157faf58fb",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:deepseek-r1:2f9e90a4ec26",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:deepseek-v3-0324:490634cbfb08",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:deepseek-v3:21240cb5a900",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:deepseek-v4-flash:53d051226124",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:deepseek-v4-pro:1e059fc0c030",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gemini-2-5-flash:4ebcebec153f",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gemini-2-5-pro:bd4b9f651197",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gemini-3-1-pro:08a0b63c565b",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gemma-2-27b-instruct:6e08c375db3f",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gemma-2-2b-instruct:0f7ccf3600d4",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gemma-2-9b-instruct:38617fbcf6db",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gemma-3-12b-instruct:a476c8648925",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gemma-3-1b-instruct:0b6239c4cc27",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gemma-3-27b-instruct:5529dc62094f",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gemma-3-4b-instruct:fd142c1534c0",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gemma-4-12b-q8:9c0ffae0bb26",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gemma-4-12b:a6807746e7b6",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gemma-4-26b-a4b-q8:e5d69b53823b",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gemma-4-26b-a4b:ae210afb72f0",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gemma-4-31b:d5f87ecf03ce",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gemma-4-e2b:1ef199560b82",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gemma-4-e4b:586d5d133b5f",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:glm-4-plus:69d69675df9e",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:glm-5-1:088a5808ade1",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:glm-5-2:b31c2c7e27c8",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:glm-5:e5975cfe8684",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gpt-4o-mini:b904511de80c",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gpt-4o:a251c1b4b97a",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gpt-5-5:74ea3881380d",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gpt-oss-120b:6e5058eb05b4",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:gpt-oss-20b:2a631a1b54b6",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:granite-4-1-3b-instruct:aa3a5ca5d6a1",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:granite-4-1-8b-instruct:fa161a881364",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:grok-4-3:30ea5c71ab55",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:kimi-k2-6:4672d233a03f",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:kimi-k2-7-code:2b1f8fa82a49",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:kimi-k2-instruct:a4a96f88af35",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:lfm2-24b-a2b-instruct:58a598612729",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:lfm2-5-8b-a1b:621b62aa1ec5",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:llama-3-1-405b-instruct:4e0977d7a04d",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:llama-3-1-70b-instruct:b592045bd955",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:llama-3-1-8b-instruct-q5:11ddd111ca0d",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:llama-3-1-8b-instruct:c88fe6613d00",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:llama-3-2-1b-instruct:4feb9a7d5732",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:llama-3-2-3b-instruct:ed579be20ec4",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:llama-3-3-70b-instruct-q6:8ca830adde9e",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:llama-3-3-70b-instruct-q8:91b002de5e96",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:llama-3-3-70b-instruct:9dfbf4283bba",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:llama-4-maverick:0a976a952783",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:llama-4-scout:d6bb1d64f33d",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:minimax-m3:be0f52d6a9df",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:mistral-7b-instruct:403ea68f376b",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:mistral-medium-3-5:2ed27023dd77",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:mistral-nemo-12b:a5f1bfc6dcbf",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:mistral-small-22b:be4d5c3a1a24",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:mistral-small-3-1:fa46b1af105f",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:mixtral-8x7b-instruct:12c33e7b1ff4",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:nvidia-nemotron-3-ultra:c9a3440fd53f",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:nvidia-nemotron-cascade-2-30b-a3b:2490edba851c",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:phi-3-medium-14b:caf6edbfd322",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:phi-3-mini-3-8b:7a1bf8a3d78b",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:phi-4-14b:2640fe205f15",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:phi-4-mini-3-8b:38dcb1a3e7cb",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:poolside-laguna-xs-2:c7c760421882",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen2-5-0-5b-instruct:ab22739a36b8",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen2-5-1-5b-instruct:0744e310af86",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen2-5-14b-instruct:a8173cc51a37",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen2-5-3b-instruct:01ff6e75b660",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen2-5-7b-instruct:b2168990b22d",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen2-5-coder-14b:5ebf392fb5b6",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen3-14b-q8:8b2c12c54f5d",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen3-14b:6c8814f9c3f1",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen3-235b-a22b:33867797dcc7",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen3-5-0-8b-instruct:711d552d068b",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen3-5-122b-a10b-instruct:f26c2e2ee91a",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen3-5-27b-instruct:ab990afd5482",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen3-5-2b-instruct:9f3835dcba16",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen3-5-35b-a3b-instruct-q8:92d9ac61c39c",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen3-5-35b-a3b-instruct:be7039716650",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen3-5-4b-instruct:5abb740bcd7b",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen3-5-9b-instruct-q8:166f1e3b43c0",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen3-5-9b-instruct:677df4fe8347",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen3-6-27b-q8:0e521f8294fa",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen3-6-27b:2c3524d6b0cd",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen3-6-35b-a3b-q8:bb15ef8348eb",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen3-6-35b-a3b:ac2c541323f6",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen3-7-plus:2866d7f45cd1",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen3-8b:a97869c72f4d",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen3-next-80b-a3b-q8:2142e1b7aeb7",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:qwen3-next-80b-a3b:33fce1244f72",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:smollm2-360m:eba1507c185f",
+      "reason": "no_exact_local_tag_match"
+    },
+    {
+      "candidate_id": "modelfit:xiaomi-mimo-v2-flash:583aaf8165a0",
+      "reason": "no_exact_local_tag_match"
+    }
+  ]
+}

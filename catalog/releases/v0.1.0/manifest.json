@@ -1,0 +1,23 @@
+{
+  "catalog": "Local Model Ledger",
+  "catalog_schema_version": "1.0.0",
+  "release": "0.1.0",
+  "released_at": "2026-07-18T21:00:00Z",
+  "record_count": 4,
+  "record_kinds": {
+    "artifact_metadata": 2,
+    "fit_estimate": 2
+  },
+  "data_licenses": {
+    "CC-BY-4.0": 2,
+    "CC0-1.0": 2
+  },
+  "files": {
+    "catalog.jsonl": {
+      "sha256": "d55a079d545ddc7e3db22062990dc9d275748de833579fb2d97e3be404378830"
+    },
+    "ATTRIBUTION.md": {
+      "sha256": "eb12b6ae77f71b8e2b9d32b243cc10dc93364600ac523cd550295a0ed2c30e76"
+    }
+  }
+}

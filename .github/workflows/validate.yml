@@ -19,5 +19,6 @@ jobs:
           cache: pip
       - run: python -m pip install -e .[dev]
       - run: ruff check .
-      - run: python scripts/validate_catalog.py
+      - run: python -m scripts.validate_catalog
+      - run: python -m scripts.validate_staging
       - run: python -m pytest

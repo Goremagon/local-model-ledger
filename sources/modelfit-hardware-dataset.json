@@ -1,0 +1,21 @@
+{
+  "source_id": "modelfit-hardware-dataset",
+  "status": "approved_for_candidate_ingestion",
+  "upstream_repository": "https://github.com/Wecko-ai/modelfit-hardware-dataset",
+  "source_url": "https://raw.githubusercontent.com/Wecko-ai/modelfit-hardware-dataset/41484659c9b9e7b8e3c2e008a7110c7e16b9fbab/models.json",
+  "source_revision": "41484659c9b9e7b8e3c2e008a7110c7e16b9fbab",
+  "github_blob_sha": "8f6215460630b38203c8d690d1519596e5d09582",
+  "expected_sha256": "3871c25bef47809582c11edac2a7105c8b9ee0aa92f954e6224a95e51e3d66c4",
+  "data_license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_attribution": "ModelFit: https://modelfit.io/",
+  "required_attribution": "ModelFit Local LLM Hardware Compatibility Dataset (https://modelfit.io/data/), CC BY 4.0",
+  "reviewed_at": "2026-07-18T00:00:00Z",
+  "reviewer": "Dylan Dunn",
+  "review_notes": [
+    "The pinned upstream repository explicitly licenses models.json under CC BY 4.0.",
+    "Memory load and tokens-per-second fields are estimates, not measurements.",
+    "Rows are staging candidates until an exact artifact revision is resolved.",
+    "Attribution must be retained in normalized records and release manifests."
+  ]
+}

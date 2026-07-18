@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": {
+    "source": "ollama",
+    "identifier": "qwen2.5-coder:7b",
+    "revision": "sha256:dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+    "format": "gguf",
+    "precision": "Q4_K_M",
+    "size_bytes": 4683087561,
+    "parameter_count": 7600000000,
+    "native_context_tokens": 32768,
+    "model_license": "Apache-2.0"
+  },
+  "review": {
+    "status": "approved_for_snapshot",
+    "reviewed_at": "2026-07-18T21:00:00Z",
+    "expires_at": "2027-01-18T21:00:00Z",
+    "reviewer": "Dylan Dunn"
+  },
+  "record_id": "fit:qwen2-5-coder-7b:dae161e27b0e90dd:modelfit",
+  "record_kind": "fit_estimate",
+  "evidence": {
+    "grade": "conservative_estimate",
+    "method": "ModelFit pinned dataset estimate joined to an exact local Ollama tag and digest.",
+    "metrics": {
+      "minimum_ram_bytes": 10737418240,
+      "estimated_load_bytes": 5905580032,
+      "task_tags": "coding",
+      "runs_locally": true,
+      "open_weights_reported": true
+    },
+    "notes": [
+      "Memory values are estimates, not measurements.",
+      "ModelFit attribution and methodology are preserved in provenance."
+    ]
+  },
+  "provenance": {
+    "source_url": "https://raw.githubusercontent.com/Wecko-ai/modelfit-hardware-dataset/41484659c9b9e7b8e3c2e008a7110c7e16b9fbab/models.json",
+    "source_revision": "41484659c9b9e7b8e3c2e008a7110c7e16b9fbab",
+    "retrieved_at": "2026-07-18T20:49:42Z",
+    "contributor": "ModelFit; normalized by Local Model Ledger",
+    "data_license": "CC-BY-4.0",
+    "redistribution_verified": true,
+    "required_attribution": "ModelFit Local LLM Hardware Compatibility Dataset (https://modelfit.io/data/), CC BY 4.0"
+  }
+}

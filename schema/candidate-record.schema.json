@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Goremagon/local-model-ledger/main/schema/candidate-record.schema.json",
+  "title": "Local Model Ledger staging candidate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "candidate_id", "state", "source", "artifact_hint", "advisory"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "candidate_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._:-]{7,199}$" },
+    "state": { "enum": ["metadata_valid", "resolved"] },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "source_url",
+        "source_revision",
+        "row_index",
+        "data_license",
+        "required_attribution"
+      ],
+      "properties": {
+        "source_id": { "type": "string", "minLength": 1 },
+        "source_url": { "type": "string", "format": "uri" },
+        "source_revision": { "type": "string", "minLength": 1 },
+        "row_index": { "type": "integer", "minimum": 0 },
+        "data_license": { "type": "string", "minLength": 1 },
+        "required_attribution": { "type": "string", "minLength": 1 }
+      }
+    },
+    "artifact_hint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["display_name", "family", "ollama_ref", "format", "precision", "parameter_count"],
+      "properties": {
+        "display_name": { "type": "string", "minLength": 1 },
+        "family": { "type": "string", "minLength": 1 },
+        "ollama_ref": { "type": ["string", "null"] },
+        "format": { "type": "string", "minLength": 1 },
+        "precision": { "type": "string", "minLength": 1 },
+        "parameter_count": { "type": ["integer", "null"], "minimum": 1 }
+      }
+    },
+    "advisory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "minimum_ram_bytes",
+        "estimated_load_bytes",
+        "runtimes",
+        "task_tags",
+        "runs_locally",
+        "open_weights",
+        "gguf_diy"
+      ],
+      "properties": {
+        "minimum_ram_bytes": { "type": ["integer", "null"], "minimum": 1 },
+        "estimated_load_bytes": { "type": ["integer", "null"], "minimum": 1 },
+        "runtimes": { "type": "array", "items": { "type": "string" } },
+        "task_tags": { "type": "array", "items": { "type": "string" } },
+        "runs_locally": { "type": "boolean" },
+        "open_weights": { "type": "boolean" },
+        "gguf_diy": { "type": "boolean" },
+        "kv_bytes_per_token": { "type": ["integer", "null"], "minimum": 0 }
+      }
+    },
+    "resolution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["artifact", "runtime", "resolved_at", "resolver"],
+      "properties": {
+        "artifact": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "source",
+            "identifier",
+            "revision",
+            "format",
+            "precision",
+            "size_bytes",
+            "parameter_count",
+            "native_context_tokens",
+            "model_license"
+          ],
+          "properties": {
+            "source": { "const": "ollama-local" },
+            "identifier": { "type": "string", "minLength": 1 },
+            "revision": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+            "format": { "type": "string", "minLength": 1 },
+            "precision": { "type": "string", "minLength": 1 },
+            "size_bytes": { "type": "integer", "minimum": 1 },
+            "parameter_count": { "type": "integer", "minimum": 1 },
+            "native_context_tokens": { "type": "integer", "minimum": 1 },
+            "model_license": { "type": ["string", "null"] },
+            "license_text_sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+            "capabilities": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "runtime": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name", "version", "backend"],
+          "properties": {
+            "name": { "const": "ollama" },
+            "version": { "type": "string", "minLength": 1 },
+            "backend": { "const": "local-auto" }
+          }
+        },
+        "resolved_at": { "type": "string", "format": "date-time" },
+        "resolver": { "const": "ollama-local-api-exact-match-v1" }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "state": { "const": "resolved" } } },
+      "then": { "required": ["resolution"] }
+    }
+  ]
+}
