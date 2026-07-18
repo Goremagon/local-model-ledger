@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local-model-ledger.example/schema/catalog-record-v1.json",
+  "title": "Local Model Ledger catalog record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_id",
+    "record_kind",
+    "artifact",
+    "evidence",
+    "provenance",
+    "review"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "record_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._:-]{7,199}$" },
+    "record_kind": {
+      "enum": ["artifact_metadata", "fit_estimate", "hardware_measurement", "task_evaluation"]
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "identifier", "revision", "format", "precision"],
+      "properties": {
+        "source": { "type": "string", "minLength": 1 },
+        "identifier": { "type": "string", "minLength": 1 },
+        "revision": { "type": "string", "minLength": 1 },
+        "format": { "type": "string", "minLength": 1 },
+        "precision": { "type": "string", "minLength": 1 },
+        "size_bytes": { "type": "integer", "minimum": 1 },
+        "parameter_count": { "type": "integer", "minimum": 1 },
+        "model_license": { "type": ["string", "null"] }
+      }
+    },
+    "runtime": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version", "backend", "context_tokens"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "version": { "type": "string", "minLength": 1 },
+        "backend": { "type": "string", "minLength": 1 },
+        "context_tokens": { "type": "integer", "minimum": 1 },
+        "arguments": { "type": "object" }
+      }
+    },
+    "hardware": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["os", "cpu", "ram_bytes", "accelerators"],
+      "properties": {
+        "os": { "type": "string", "minLength": 1 },
+        "cpu": { "type": "string", "minLength": 1 },
+        "ram_bytes": { "type": "integer", "minimum": 1 },
+        "accelerators": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "memory_bytes"],
+            "properties": {
+              "name": { "type": "string", "minLength": 1 },
+              "memory_bytes": { "type": "integer", "minimum": 0 },
+              "driver": { "type": ["string", "null"] }
+            }
+          }
+        }
+      }
+    },
+    "task": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["category", "benchmark", "benchmark_version"],
+      "properties": {
+        "category": { "type": "string", "minLength": 1 },
+        "benchmark": { "type": "string", "minLength": 1 },
+        "benchmark_version": { "type": "string", "minLength": 1 }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["grade", "method", "metrics"],
+      "properties": {
+        "grade": {
+          "enum": ["exact_measured", "runtime_verified", "conservative_estimate", "reported"]
+        },
+        "method": { "type": "string", "minLength": 1 },
+        "metrics": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": { "type": ["number", "integer", "string", "boolean", "null"] }
+        },
+        "sample_count": { "type": "integer", "minimum": 1 },
+        "notes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_url",
+        "retrieved_at",
+        "contributor",
+        "data_license",
+        "redistribution_verified"
+      ],
+      "properties": {
+        "source_url": { "type": "string", "format": "uri" },
+        "source_revision": { "type": ["string", "null"] },
+        "retrieved_at": { "type": "string", "format": "date-time" },
+        "contributor": { "type": "string", "minLength": 1 },
+        "data_license": { "type": "string", "minLength": 1 },
+        "redistribution_verified": { "const": true },
+        "required_attribution": { "type": ["string", "null"] }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "reviewed_at", "expires_at"],
+      "properties": {
+        "status": { "const": "approved_for_snapshot" },
+        "reviewed_at": { "type": "string", "format": "date-time" },
+        "expires_at": { "type": "string", "format": "date-time" },
+        "reviewer": { "type": "string", "minLength": 1 }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "record_kind": { "const": "hardware_measurement" } } },
+      "then": { "required": ["runtime", "hardware"] }
+    },
+    {
+      "if": { "properties": { "record_kind": { "const": "task_evaluation" } } },
+      "then": { "required": ["runtime", "hardware", "task"] }
+    }
+  ]
+}
