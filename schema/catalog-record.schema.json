@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://local-model-ledger.example/schema/catalog-record-v1.json",
+  "$id": "https://raw.githubusercontent.com/Goremagon/local-model-ledger/main/schema/catalog-record.schema.json",
   "title": "Local Model Ledger catalog record",
   "type": "object",
   "additionalProperties": false,

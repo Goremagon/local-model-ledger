@@ -12,6 +12,11 @@ license = "MIT"
 authors = [{ name = "Dylan Dunn" }]
 dependencies = ["jsonschema>=4.23,<5"]
 
+[project.urls]
+Homepage = "https://github.com/Goremagon/local-model-ledger"
+Repository = "https://github.com/Goremagon/local-model-ledger"
+Issues = "https://github.com/Goremagon/local-model-ledger/issues"
+
 [project.optional-dependencies]
 dev = ["pytest>=8.3,<9", "ruff>=0.9,<1"]
 
